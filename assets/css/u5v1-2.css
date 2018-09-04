@@ -15,7 +15,7 @@ body * + * {
   margin-top: 1.5em;
 }
 
-.container {
+div.container {
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -26,4 +26,34 @@ header {
 img.flex-nav {
   width: 100%;
   border: 3px solid #eeeeee;
+}
+
+/* Flex Nav */
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  background: #5d4b43;
+  padding: 0px;
+}
+nav ul li {
+  background: #c66a57;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+}
+nav ul li a {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+/* By using auto margins with the above flex,
+you override the default alignment specified
+by justify-content on an individual flex item.
+In this case, .nav-righ has a margin-left: auto
+applied to it. This declaration allows it to
+float to the right edge of the container while
+the rest of the flex items are aligned according
+to justify-content: flex-start. */
+li.nav-right {
+  margin-left: auto;
 }
